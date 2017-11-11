@@ -6,6 +6,16 @@ transitions in modern browsers and inspired by the idea behind prezi.com.
 
 This is a fork of [impress.js](https://github.com/impress/impress.js).
 
+Installation
+---------------
+
+**bower:**
+```cmd
+  bower install jquery-impress
+```
+**manally:**
+- copy dist/jquery.impress.min.js 
+
 Usage
 ---------------
 
@@ -15,7 +25,7 @@ Usage
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/jquery.impress.min.js"></script>
+<script src="bower_components/jquery-impress/dist/jquery.impress.min.js"></script>
 ````
 **Optional Dependencies:**
 
