@@ -268,7 +268,8 @@ a:focus {
 }
 
 #title h1 {
-    font-size: 190px;
+    font-size: 110px;
+    line-height: 2em;
 
     -webkit-transform: translateZ(50px);
     -moz-transform:    translateZ(50px);
@@ -703,5 +704,11 @@ a:focus {
 */
 
 .sub.hidden{
-  display: none;
+  visibility: hidden;
+}
+
+#additional ul{
+  list-style: circle;
+  padding-left: 40px;
+  margin-top: 15px;
 }
