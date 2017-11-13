@@ -2,6 +2,7 @@
   $.fn.impress = function( options ) {
 
       var settings = $.extend({
+          stepClass: 'step',
           subStepClass: 'sub' ,
           hiddenClass: 'hidden',
           shownClass: 'zoomIn animated', // animate.css class
@@ -39,6 +40,9 @@
                               '.' + settings.hiddenClass;
 
             var sub = $(subSelector, activeStep);
+            sub.sort(function sort_li(a, b) {
+                return ($(b).data('position')) < ($(a).data('position'));
+            });
 
             // if there are still subSteps to display, we don't go to next step
             if (sub.length > 0) {
