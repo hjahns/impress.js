@@ -42,7 +42,6 @@
             var sub = $(subSelector, activeStep);
 
             sub.sort(function sort_li(a, b) {
-              console.log($(b).data('position'));
                 return ($(a).data('position')) - ($(b).data('position'));
             });
 
