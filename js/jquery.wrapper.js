@@ -40,21 +40,23 @@
                               '.' + settings.hiddenClass;
 
             var sub = $(subSelector, activeStep);
+
             sub.sort(function sort_li(a, b) {
-                return ($(b).data('position')) < ($(a).data('position'));
+              console.log($(b).data('position'));
+                return ($(a).data('position')) - ($(b).data('position'));
             });
 
             // if there are still subSteps to display, we don't go to next step
             if (sub.length > 0) {
-              var element = sub.first(),
-                  class = element.data("show-class");
+              var element = sub.first();
+              var showClass = element.data("show-class");
 
-              if (typeof class === 'undefined') {
-                class = settings.shownClass
+              if (typeof showClass === 'undefined') {
+                showClass = settings.shownClass
               }
 
               element.removeClass(settings.hiddenClass);
-              element.addClass(class);
+              element.addClass(showClass);
 
               return false;
             } else {
