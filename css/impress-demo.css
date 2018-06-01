@@ -712,3 +712,13 @@ a:focus {
   padding-left: 40px;
   margin-top: 15px;
 }
+
+#subTopic{
+  position: fixed;
+  top: 20px;
+  left: 0;
+  padding: 10px 20px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  transition: all 0.5s;
+}

@@ -67,6 +67,10 @@
 
               return false;
             } else {
+              var name = $(next).data("name");
+              if (name !== "undefined") {
+                  $("#subTopic").html(name);
+              }
               return impress.goto( next );
             }
           };
