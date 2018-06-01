@@ -1,6 +1,6 @@
 {
   "name": "jquery-impress",
-  "version": "0.7.2",
+  "version": "0.9.0",
   "description": "It's a presentation framework based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com",
   "homepage": "https://github.com/hjahns/jquery-impress",
   "license" : ["https://opensource.org/licenses/MIT","http://www.gnu.org/licenses/"],
