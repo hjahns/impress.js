@@ -39,23 +39,31 @@
             var subSelector = '.' + settings.subStepClass +
                               '.' + settings.hiddenClass;
 
-            var sub = $(subSelector, activeStep);
+            var sub = $('.' + settings.subStepClass, activeStep);
+            var subActive = $(subSelector, activeStep);
 
-            sub.sort(function sort_li(a, b) {
+            subActive.sort(function sort_li(a, b) {
                 return ($(a).data('position')) - ($(b).data('position'));
             });
 
             // if there are still subSteps to display, we don't go to next step
-            if (sub.length > 0) {
-              var element = sub.first();
+            if (subActive.length > 0) {
+              var element = subActive.first();
               var showClass = element.data("show-class");
+              var customFunc = element.data("func");
 
               if (typeof showClass === 'undefined') {
                 showClass = settings.shownClass
               }
 
-              element.removeClass(settings.hiddenClass);
-              element.addClass(showClass);
+              if (typeof customFunc === 'undefined') {
+                element.removeClass(settings.hiddenClass);
+                element.addClass(showClass);
+              } else {
+                window[customFunc](sub);
+                element.removeClass(settings.hiddenClass);
+                element.addClass(showClass);
+              }
 
               return false;
             } else {
@@ -67,3 +75,14 @@
   };
 
 }( jQuery ));
+
+var i = 0;
+function myFunc(sub){
+   setTimeout(function () {
+      if (i < sub.length) {
+         sub.eq(i).css("color", "red");
+         i++;
+         myFunc(sub);
+      }
+   }, 200)
+}
