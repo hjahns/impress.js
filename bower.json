@@ -1,6 +1,6 @@
 {
   "name": "jquery-impress",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "It's a presentation framework",
   "homepage": "https://github.com/hjahns/jquery-impress",
   "license" : ["https://opensource.org/licenses/MIT","http://www.gnu.org/licenses/"],
